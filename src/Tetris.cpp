@@ -9,7 +9,7 @@ Tetris::Tetris(sf::RenderWindow* _window)
 
 	game_filed = new GameField(_window);
 
-	pixel_font.loadFromFile("pixel_font.ttf");
+	pixel_font.loadFromFile("assets/pixel_font.ttf");
 	scoreboard = sf::Text("", pixel_font, 40);
 
 	// read save file
@@ -233,13 +233,13 @@ void Tetris::spawnRandomTetromino()
 	current_tetromino->setPos(4,0);
 
 	if (esster_egg_active)
-		current_tetromino->setTexture(ResourceManager::getTexture("Textures/mino_shadow.jpg"));
+		current_tetromino->setTexture(ResourceManager::getTexture("assets/Textures/mino_shadow.jpg"));
 	else
-		current_tetromino->setTexture(ResourceManager::getTexture("Textures/mino.png"));
+		current_tetromino->setTexture(ResourceManager::getTexture("assets/Textures/mino.png"));
 
 	current_shadow = getShape(window, current_tetromino->getShapeID());
 	current_shadow->setPos(4, 0);
-	current_shadow->setTexture(ResourceManager::getTexture("Textures/mino_shadow.png"));
+	current_shadow->setTexture(ResourceManager::getTexture("assets/Textures/mino_shadow.png"));
 
 	if (game_filed->checkCollision(current_tetromino->getShape()))
 	{
@@ -312,7 +312,7 @@ void Tetris::drawUI()
 		Tetromino* tet = *it;
 		sf::Vector2f ui_pos(COLUMNS * CELL_SIZE + 70.0f, 45.0f + 30.0f + 100.0f + 45.0f);
 
-		tet->setTexture(ResourceManager::getTexture("Textures/mino.png"));
+		tet->setTexture(ResourceManager::getTexture("assets/Textures/mino.png"));
 		tet->setPos(COLUMNS + 3, 9 + i*3);
 		tet->draw();
 

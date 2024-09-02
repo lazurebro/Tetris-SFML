@@ -5,7 +5,7 @@ GameField::GameField(sf::RenderWindow* _window)
 	: window(_window)
 {
 	PointDrawer = sf::RectangleShape(sf::Vector2f(CELL_SIZE, CELL_SIZE));
-	PointDrawer.setTexture(ResourceManager::getTexture("Textures/mino.png"));
+	PointDrawer.setTexture(ResourceManager::getTexture("assets/Textures/mino.png"));
 	landed = std::vector<std::vector<int>>(ROWS, std::vector<int>(COLUMNS, 0));
 }
 
@@ -235,11 +235,11 @@ void GameField::draw( DRAW_MODE draw_mode ) const
 			{
 				switch (landed[y][x]) {
 				case (0):
-					PointDrawer.setTexture(ResourceManager::getTexture("Textures/empty_board.png"));
+					PointDrawer.setTexture(ResourceManager::getTexture("assets/Textures/empty_board.png"));
 					PointDrawer.setFillColor(sf::Color(100,100,100));
 					break;
 				default:
-					PointDrawer.setTexture(ResourceManager::getTexture("Textures/mino.png"));
+					PointDrawer.setTexture(ResourceManager::getTexture("assets/Textures/mino.png"));
 					PointDrawer.setFillColor(Tetromino::getColorFromShapeID(landed[y][x]));
 					break;
 				}
@@ -267,11 +267,11 @@ void GameField::draw( DRAW_MODE draw_mode ) const
 				{
 					switch (landed[y][x]) {
 					case (0):
-						PointDrawer.setTexture(ResourceManager::getTexture("Textures/empty_board.png"));
+						PointDrawer.setTexture(ResourceManager::getTexture("assets/Textures/empty_board.png"));
 						PointDrawer.setFillColor(sf::Color(100, 100, 100));
 						break;
 					default:
-						PointDrawer.setTexture(ResourceManager::getTexture("Textures/mino.png"));
+						PointDrawer.setTexture(ResourceManager::getTexture("assets/Textures/mino.png"));
 						PointDrawer.setFillColor(Tetromino::getColorFromShapeID(landed[y][x]));
 						break;
 					}
