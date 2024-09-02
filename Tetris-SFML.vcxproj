@@ -145,23 +145,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CodeKonamiHandler.cpp" />
-    <ClCompile Include="GameField.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="Shapes.cpp" />
-    <ClCompile Include="Tetris.cpp" />
+    <ClCompile Include="src\CodeKonamiHandler.cpp" />
+    <ClCompile Include="src\GameField.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ResourceManager.cpp" />
+    <ClCompile Include="src\Shapes.cpp" />
+    <ClCompile Include="src\Tetris.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cpp.hint" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CodeKonamiHandler.h" />
-    <ClInclude Include="GameField.h" />
-    <ClInclude Include="Globals.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="Shapes.h" />
-    <ClInclude Include="Tetris.h" />
+    <ClInclude Include="src\CodeKonamiHandler.h" />
+    <ClInclude Include="src\GameField.h" />
+    <ClInclude Include="src\Globals.h" />
+    <ClInclude Include="src\ResourceManager.h" />
+    <ClInclude Include="src\Shapes.h" />
+    <ClInclude Include="src\Tetris.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
