@@ -5,6 +5,8 @@
 
 include/
 lib/
+Debug/
+Tetris-SFML/
 
 # User-specific files
 *.rsuser
